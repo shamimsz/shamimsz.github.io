@@ -16,12 +16,12 @@ hero:
   eyebrow: "AI, data systems, and backend engineering"
   headline: "Backend developer building AI-ready data systems."
   summary: >
-    I work at the intersection of backend engineering and applied AI: building
-    reliable software around data workflows, model-serving interfaces,
-    annotation systems, and research-style evaluation. My interests span
-    machine learning, computer vision, natural language processing, large
-    language models, recommender systems, and the backend infrastructure needed
-    to make intelligent products usable.
+    My work is centered on Python backend development for data-heavy systems,
+    currently in a retail computer-vision product at Ofogh360. I am interested
+    in building reliable software around model outputs, annotation workflows,
+    evaluation pipelines, and practical AI systems, especially in computer
+    vision, NLP, LLMs, and recommender systems.
+
 
 about:
   title: "About"
@@ -42,6 +42,7 @@ about:
       recommender systems, model evaluation, and software systems that make
       analytical work usable for real users.
 
+
 education:
   degree: "B.Sc. graduate"
   university: "Islamic Azad University, Tehran Central Branch"
@@ -49,6 +50,7 @@ education:
   gpa: "17.96 / 20"
   language: "IELTS 8.5"
   final_project_advisor: "Dr. Fatemeh Sheikhi"
+
 
 experience:
   title: "Backend Developer"
@@ -64,6 +66,7 @@ experience:
     - "Support data flows around shelf images, detected products, reporting, and operational review."
     - "Work in a product context where backend reliability connects directly to computer-vision output and business analytics."
 
+
 teaching:
   title: "Teaching Assistant"
   dates: "February 2022 - Present"
@@ -78,6 +81,7 @@ teaching:
     - "Assist students with requirements analysis, use-case thinking, workflow modeling, and translating user needs into structured system specifications."
     - "Help explain analysis and design artifacts such as process descriptions, entity relationships, data flow, and system documentation."
     - "Support practical learning through assignment guidance, technical discussion, and feedback on how to make software designs clearer and more realistic."
+
 
 research:
   - title: "Role of Machine Learning in IoT Security"
@@ -96,6 +100,7 @@ research:
       comparing popularity, KNN collaborative filtering, and SVD under temporal
       validation with both rating-prediction and top-k ranking metrics.
     note: "Included as a technical case study because it demonstrates research-style evaluation and reproducible experimentation."
+
 
 activities:
   - title: "Elected member, Computer Scientific Association"
