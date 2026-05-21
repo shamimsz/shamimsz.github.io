@@ -49,6 +49,7 @@
       <strong>{{ profile.education.degree }}</strong>
       <p>{{ profile.education.university }}</p>
       <p>{{ profile.education.location }}</p>
+      <p>Final project advisor: {{ profile.education.final_project_advisor }}</p>
     </article>
     <article class="credential-card">
       <span>GPA</span>
@@ -127,6 +128,27 @@
   </div>
 </section>
 
+<section id="activities" class="activities-section" aria-labelledby="activities-title">
+  <div class="section-heading">
+    <p class="section-kicker">Activities</p>
+    <h2 id="activities-title">Leadership and early technical background</h2>
+    <p>
+      These experiences show the longer path behind my current AI and backend
+      direction, from robotics and Android development to university-level
+      academic community work.
+    </p>
+  </div>
+  <div class="activity-list">
+    {% for item in profile.activities %}
+      <article class="activity-item">
+        <span>{{ item.period }}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.summary }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
 <section class="interest-band" aria-labelledby="interests-title">
   <div class="section-heading">
     <p class="section-kicker">Academic direction</p>
@@ -200,7 +222,7 @@
   </div>
   <div class="skills-grid">
     {% for group in profile.skills %}
-      <article class="skill-group">
+      <article class="skill-group {% if group.priority == 'secondary' %}skill-group-secondary{% endif %}">
         <h3>{{ group["group"] }}</h3>
         <ul>
           {% for item in group["items"] %}

@@ -14,7 +14,7 @@ person:
 
 hero:
   eyebrow: "AI, data systems, and backend engineering"
-  headline: "Backend developer building data-driven software around machine learning, computer vision, NLP, and LLM systems."
+  headline: "Backend developer building AI-ready data systems."
   summary: >
     I work at the intersection of backend engineering and applied AI: building
     reliable software around data workflows, model-serving interfaces,
@@ -48,6 +48,7 @@ education:
   location: "Tehran, Iran"
   gpa: "17.96 / 20"
   language: "IELTS 8.5"
+  final_project_advisor: "Dr. Fatemeh Sheikhi"
 
 experience:
   title: "Backend Developer"
@@ -96,6 +97,26 @@ research:
       validation with both rating-prediction and top-k ranking metrics.
     note: "Included as a technical case study because it demonstrates research-style evaluation and reproducible experimentation."
 
+activities:
+  - title: "Elected member, Computer Scientific Association"
+    period: "Final undergraduate year"
+    summary: >
+      Elected to the university's Computer Scientific Association, where we
+      organized seminars on artificial intelligence with faculty support for
+      students interested in the field.
+  - title: "Awarded high-school Android chat application"
+    period: "10th grade, Farzanegan 4"
+    summary: >
+      Helped build a Java Android chat application in Android Studio for a
+      SAMPAD school exhibition. The project received a district-level prize and
+      monetary award for the student team.
+  - title: "Robotics and embedded systems background"
+    period: "Middle school and university coursework"
+    summary: >
+      Built an obstacle-avoiding mobile robot as part of a robotics team, and
+      later worked with Arduino, microcontrollers, Proteus simulations, and
+      traffic-light and parking-lot control exercises in university coursework.
+
 academic_interests:
   - "Machine learning evaluation and applied model comparison"
   - "Computer vision systems, annotation workflows, and retail image analytics"
@@ -106,14 +127,21 @@ academic_interests:
   - "Explainable AI and decision-support systems"
 
 skills:
-  - group: "Programming"
-    items: ["Python", "SQL", "C++17", "JavaScript", "HTML", "CSS", "Git", "Linux"]
-  - group: "Data Science"
+  - group: "Core Programming"
+    priority: "primary"
+    items: ["Python", "SQL", "JavaScript", "Git", "Linux"]
+  - group: "AI and Data Science"
+    priority: "primary"
     items: ["pandas", "NumPy", "scikit-learn", "Surprise", "MLflow", "model evaluation", "ranking metrics"]
-  - group: "AI Interests"
+  - group: "AI Focus Areas"
+    priority: "primary"
     items: ["machine learning", "computer vision", "NLP", "LLMs", "recommender systems", "explainable AI"]
   - group: "Backend"
+    priority: "primary"
     items: ["Django", "FastAPI", "Flask", "REST APIs", "SQLite", "MongoDB", "authentication"]
+  - group: "Additional Technical Background"
+    priority: "secondary"
+    items: ["C++", "C#", "MATLAB", "HTML", "CSS", "Docker", "Kubernetes", "Cisco networking basics", "Assembly familiarity", "Arduino", "Proteus", "microcontrollers"]
 
 contact_note: >
   I am open to research, engineering, and collaboration opportunities around

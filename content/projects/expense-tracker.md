@@ -25,9 +25,10 @@ metrics:
 
 ## Problem
 
-For my undergraduate final project, I wanted to build more than a simple expense
-CRUD app. The goal was a personal finance system that helps users understand
-their financial behavior through tracking, budgets, and transparent insights.
+For my undergraduate final project, supervised by Dr. Fatemeh Sheikhi, I wanted
+to build more than a simple expense CRUD app. The goal was a personal finance
+system that helps users understand their financial behavior through tracking,
+budgets, and transparent insights.
 
 ## Approach
 

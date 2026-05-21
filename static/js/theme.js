@@ -1,12 +1,9 @@
 const toggle = document.querySelector("[data-theme-toggle]");
-const label = document.querySelector("[data-theme-label]");
 
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
   localStorage.setItem("theme", theme);
-  if (label) {
-    label.textContent = theme === "dark" ? "Light" : "Dark";
-  }
+  toggle?.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
 }
 
 if (toggle) {
