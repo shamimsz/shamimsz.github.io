@@ -1,0 +1,121 @@
+site:
+  title: "Shamim Saharkhiz | AI and Backend Portfolio"
+  description: "Professional portfolio for AI, data science, backend systems, and research-oriented software."
+
+person:
+  name: "Shamim Saharkhiz"
+  role: "Backend Developer focused on AI and Data Systems"
+  location: "Iran"
+  email: "shamimsaharkhiz@gmail.com"
+  github: "https://github.com/shamimsz"
+  linkedin: "https://www.linkedin.com/in/shamim-saharkhiz/"
+  cv_path: "/static/assets/Shamim-CV.pdf"
+  photo_path: "/static/assets/profile-placeholder.svg"
+
+hero:
+  eyebrow: "AI, data systems, and backend engineering"
+  headline: "Backend developer building data-driven software around machine learning, computer vision, NLP, and LLM systems."
+  summary: >
+    I work at the intersection of backend engineering and applied AI: building
+    reliable software around data workflows, model-serving interfaces,
+    annotation systems, and research-style evaluation. My interests span
+    machine learning, computer vision, natural language processing, large
+    language models, recommender systems, and the backend infrastructure needed
+    to make intelligent products usable.
+
+about:
+  title: "About"
+  paragraphs:
+    - >
+      I graduated from Islamic Azad University, Tehran Central Branch, with a
+      GPA of 17.96 out of 20. My strongest language is Python, and I use it for
+      backend development, data analysis, experiments, and reproducible project
+      workflows.
+    - >
+      Since November 2025, I have worked with Ofogh360 Team as a backend
+      developer on a shelf-share and product annotation platform connected to
+      computer vision workflows. The product helps retail teams analyze shelf
+      images, product presence, face share, coverage, and reporting outputs.
+    - >
+      I am especially interested in AI systems that connect models with real
+      products: computer vision pipelines, NLP and LLM-based tools,
+      recommender systems, model evaluation, and software systems that make
+      analytical work usable for real users.
+
+education:
+  degree: "B.Sc. graduate"
+  university: "Islamic Azad University, Tehran Central Branch"
+  location: "Tehran, Iran"
+  gpa: "17.96 / 20"
+  language: "IELTS 8.5"
+
+experience:
+  title: "Backend Developer"
+  company: "Ofogh360 Team"
+  dates: "November 2025 - Present"
+  website: "https://ofoq360.ir"
+  summary: >
+    Working on backend features for a computer-vision retail analytics platform
+    used for shelf image annotation, product identification workflows, and
+    business reporting around coverage and face share.
+  bullets:
+    - "Develop backend features for Django-based annotation and product workflow tools."
+    - "Support data flows around shelf images, detected products, reporting, and operational review."
+    - "Work in a product context where backend reliability connects directly to computer-vision output and business analytics."
+
+teaching:
+  title: "Teaching Assistant"
+  dates: "February 2022 - Present"
+  institution: "Islamic Azad University, Tehran Central Branch"
+  course: "Systems Analysis and Design"
+  professor: "Dr. Hashemitaba"
+  summary: >
+    Supporting the Systems Analysis and Design course, helping students
+    understand how software projects move from vague business needs to clearer
+    requirements, process models, system diagrams, and implementable designs.
+  bullets:
+    - "Assist students with requirements analysis, use-case thinking, workflow modeling, and translating user needs into structured system specifications."
+    - "Help explain analysis and design artifacts such as process descriptions, entity relationships, data flow, and system documentation."
+    - "Support practical learning through assignment guidance, technical discussion, and feedback on how to make software designs clearer and more realistic."
+
+research:
+  - title: "Role of Machine Learning in IoT Security"
+    label: "Past university research"
+    status: "Completed"
+    summary: >
+      Conducted a university research project on how machine learning can support
+      IoT security, including threat detection, anomaly identification, and the
+      challenges of applying ML in resource-constrained connected devices.
+    note: "The work received strong positive feedback from faculty."
+  - title: "Movie Recommender System with Temporal Evaluation"
+    label: "Independent applied AI research"
+    status: "Project research"
+    summary: >
+      Built a research-oriented recommender-system study using MovieLens 100k,
+      comparing popularity, KNN collaborative filtering, and SVD under temporal
+      validation with both rating-prediction and top-k ranking metrics.
+    note: "Included as a technical case study because it demonstrates research-style evaluation and reproducible experimentation."
+
+academic_interests:
+  - "Machine learning evaluation and applied model comparison"
+  - "Computer vision systems, annotation workflows, and retail image analytics"
+  - "Natural language processing and LLM-based software tools"
+  - "Recommender systems, ranking metrics, and user-facing AI evaluation"
+  - "Backend infrastructure for model-serving and data-driven applications"
+  - "Reproducible data science and research-style experimentation"
+  - "Explainable AI and decision-support systems"
+
+skills:
+  - group: "Programming"
+    items: ["Python", "SQL", "C++17", "JavaScript", "HTML", "CSS", "Git", "Linux"]
+  - group: "Data Science"
+    items: ["pandas", "NumPy", "scikit-learn", "Surprise", "MLflow", "model evaluation", "ranking metrics"]
+  - group: "AI Interests"
+    items: ["machine learning", "computer vision", "NLP", "LLMs", "recommender systems", "explainable AI"]
+  - group: "Backend"
+    items: ["Django", "FastAPI", "Flask", "REST APIs", "SQLite", "MongoDB", "authentication"]
+
+contact_note: >
+  I am open to research, engineering, and collaboration opportunities around
+  applied AI, computer vision, NLP, LLM tools, recommender systems, data science,
+  and backend systems for intelligent applications.

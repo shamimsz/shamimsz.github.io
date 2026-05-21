@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero-section">
+  <div class="hero-copy">
+    <p class="eyebrow">{{ profile.hero.eyebrow }}</p>
+    <h1>{{ profile.hero.headline }}</h1>
+    <p class="hero-summary">{{ profile.hero.summary }}</p>
+    <div class="hero-actions">
+      <a class="button primary" href="#projects">View projects</a>
+      <a class="button secondary" href="{{ profile.person.cv_path }}">Open CV</a>
+    </div>
+    <div class="quick-links" aria-label="Profile links">
+      <a href="{{ profile.person.github }}">GitHub</a>
+      <a href="{{ profile.person.linkedin }}">LinkedIn</a>
+      <a href="mailto:{{ profile.person.email }}">Email</a>
+    </div>
+  </div>
+  <aside class="profile-panel" aria-label="Profile summary">
+    <img class="profile-photo" src="{{ profile.person.photo_path }}" alt="Portrait of {{ profile.person.name }}">
+    <div>
+      <p class="profile-name">{{ profile.person.name }}</p>
+      <p class="profile-role">{{ profile.person.role }}</p>
+      <p class="profile-location">{{ profile.person.location }}</p>
+    </div>
+  </aside>
+</section>
+
+<section id="about" class="split-section">
+  <div>
+    <p class="section-kicker">Profile</p>
+    <h2>{{ profile.about.title }}</h2>
+  </div>
+  <div class="text-stack">
+    {% for paragraph in profile.about.paragraphs %}
+      <p>{{ paragraph }}</p>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="credential-section" aria-labelledby="education-title">
+  <div class="section-heading">
+    <p class="section-kicker">Education</p>
+    <h2 id="education-title">Academic background and language score</h2>
+  </div>
+  <div class="credential-grid">
+    <article class="credential-card">
+      <span>Degree</span>
+      <strong>{{ profile.education.degree }}</strong>
+      <p>{{ profile.education.university }}</p>
+      <p>{{ profile.education.location }}</p>
+    </article>
+    <article class="credential-card">
+      <span>GPA</span>
+      <strong>{{ profile.education.gpa }}</strong>
+      <p>Final undergraduate GPA</p>
+    </article>
+    <article class="credential-card">
+      <span>English</span>
+      <strong>{{ profile.education.language }}</strong>
+      <p>Academic English proficiency</p>
+    </article>
+  </div>
+</section>
+
+<section id="experience" class="experience-section" aria-labelledby="experience-title">
+  <div class="section-heading">
+    <p class="section-kicker">Professional experience</p>
+    <h2 id="experience-title">Backend work connected to computer vision products</h2>
+  </div>
+  <article class="experience-card">
+    <div class="experience-head">
+      <div>
+        <h3>{{ profile.experience.title }}</h3>
+        <p>{{ profile.experience.company }} · {{ profile.experience.dates }}</p>
+      </div>
+      <a class="text-link" href="{{ profile.experience.website }}">Company website</a>
+    </div>
+    <p>{{ profile.experience.summary }}</p>
+    <ul>
+      {% for bullet in profile.experience.bullets %}
+        <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>
+
+<section id="teaching" class="teaching-section" aria-labelledby="teaching-title">
+  <div class="section-heading">
+    <p class="section-kicker">Teaching</p>
+    <h2 id="teaching-title">Teaching assistant work</h2>
+  </div>
+  <article class="experience-card">
+    <div class="experience-head">
+      <div>
+        <h3>{{ profile.teaching.title }}</h3>
+        <p>{{ profile.teaching.course }} · {{ profile.teaching.professor }} · {{ profile.teaching.institution }} · {{ profile.teaching.dates }}</p>
+      </div>
+    </div>
+    <p>{{ profile.teaching.summary }}</p>
+    <ul>
+      {% for bullet in profile.teaching.bullets %}
+        <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>
+
+<section id="research" class="research-section" aria-labelledby="research-title">
+  <div class="section-heading">
+    <p class="section-kicker">Research</p>
+    <h2 id="research-title">Research and research-style project work</h2>
+    <p>
+      I include both university research and technical project research when the
+      work involved a clear question, evaluation process, and written reasoning.
+    </p>
+  </div>
+  <div class="research-grid">
+    {% for item in profile.research %}
+      <article class="research-card">
+        <span>{{ item.label }} · {{ item.status }}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.summary }}</p>
+        <p class="research-note">{{ item.note }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="interest-band" aria-labelledby="interests-title">
+  <div class="section-heading">
+    <p class="section-kicker">Academic direction</p>
+    <h2 id="interests-title">Areas I want to keep developing</h2>
+  </div>
+  <div class="interest-grid">
+    {% for interest in profile.academic_interests %}
+      <span>{{ interest }}</span>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="projects" class="projects-section" aria-labelledby="projects-title">
+  <div class="section-heading">
+    <p class="section-kicker">Selected work</p>
+    <h2 id="projects-title">Featured case studies</h2>
+    <p>
+      I am keeping this section selective. These projects show my strongest
+      technical signals: recommender systems, Python web development, backend
+      architecture, and computer science fundamentals.
+    </p>
+  </div>
+
+  <div class="project-grid">
+    {% for project in projects %}
+      {% if project.featured %}
+        <article class="project-card">
+          <div class="project-meta">
+            <span>{{ project.area }}</span>
+            <span>{{ project.year }}</span>
+          </div>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.summary }}</p>
+          <div class="tool-list" aria-label="Tools used">
+            {% for tool in project.tools %}
+              <span>{{ tool }}</span>
+            {% endfor %}
+          </div>
+          <a class="text-link" href="{{ url_for('project_detail', slug=project.slug) }}">Read case study</a>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="additional-section" aria-labelledby="additional-title">
+  <div class="section-heading">
+    <p class="section-kicker">Additional academic work</p>
+    <h2 id="additional-title">Earlier project with data-oriented product thinking</h2>
+  </div>
+  <div class="additional-list">
+    {% for project in projects %}
+      {% if not project.featured %}
+        <article class="additional-item">
+          <div>
+            <span>{{ project.area }} · {{ project.year }}</span>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.summary }}</p>
+          </div>
+          <a class="text-link" href="{{ url_for('project_detail', slug=project.slug) }}">Read case study</a>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section id="skills" class="skills-section" aria-labelledby="skills-title">
+  <div class="section-heading">
+    <p class="section-kicker">Technical base</p>
+    <h2 id="skills-title">Skills I can explain and use</h2>
+  </div>
+  <div class="skills-grid">
+    {% for group in profile.skills %}
+      <article class="skill-group">
+        <h3>{{ group["group"] }}</h3>
+        <ul>
+          {% for item in group["items"] %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="contact" class="contact-section" aria-labelledby="contact-title">
+  <div>
+    <p class="section-kicker">Contact</p>
+    <h2 id="contact-title">For research, engineering, and AI-focused conversations</h2>
+    <p>{{ profile.contact_note }}</p>
+  </div>
+  <div class="contact-actions">
+    <a class="button primary" href="mailto:{{ profile.person.email }}">Email me</a>
+    <a class="button secondary" href="{{ profile.person.github }}">GitHub</a>
+    <a class="button secondary" href="{{ profile.person.linkedin }}">LinkedIn</a>
+  </div>
+</section>
+{% endblock %}

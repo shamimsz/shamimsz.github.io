@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="project-page">
+  <a class="back-link" href="{{ url_for('index') }}#projects">Back to projects</a>
+
+  <header class="project-hero">
+    <div>
+      <p class="eyebrow">{{ project.area }} · {{ project.year }}</p>
+      <h1>{{ project.title }}</h1>
+      <p class="hero-summary">{{ project.summary }}</p>
+    </div>
+    <aside class="project-facts" aria-label="Project facts">
+      <div>
+        <span>Status</span>
+        <strong>{{ project.status }}</strong>
+      </div>
+      {% for metric in project.metrics %}
+        <div>
+          <span>{{ metric.label }}</span>
+          <strong>{{ metric.value }}</strong>
+        </div>
+      {% endfor %}
+    </aside>
+  </header>
+
+  <section class="project-tools" aria-label="Tools">
+    {% for tool in project.tools %}
+      <span>{{ tool }}</span>
+    {% endfor %}
+  </section>
+
+  <div class="case-study">
+    {{ project.body | safe }}
+  </div>
+
+  <section class="project-links" aria-label="Project links">
+    {% if project.links.github %}
+      <a class="button primary" href="{{ project.links.github }}">GitHub repository</a>
+    {% endif %}
+    {% if project.links.demo %}
+      <a class="button secondary" href="{{ project.links.demo }}">Live demo</a>
+    {% endif %}
+  </section>
+</article>
+{% endblock %}
