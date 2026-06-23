@@ -10,7 +10,7 @@ person:
   github: "https://github.com/shamimsz"
   linkedin: "https://www.linkedin.com/in/shamim-saharkhiz/"
   cv_path: "/static/assets/Shamim-CV.pdf"
-  photo_path: "/static/assets/profile-placeholder.svg"
+  photo_path: "/static/assets/profile-placeholder.jpeg"
 
 hero:
   eyebrow: "AI, data systems, and backend engineering"
